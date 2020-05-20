@@ -22,7 +22,7 @@ public class BaseTest {
 
     @BeforeTest(alwaysRun = true)
     @Parameters({"browser", "url"})
-    public void beforeTest(String browser, String url, String user, String pass) {
+    public void beforeTest(String browser, String url) {
         driver = new Driver(browser);
         home = new HomePage(driver.getDriver(), url);
         home.logIn(myProperties.getProperty("jira.auth.username"),
