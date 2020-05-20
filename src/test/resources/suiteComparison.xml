@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Booking.com test suite" verbose="1">
+    <listeners>
+        <listener class-name="com.globant.web.listeners.Listener"/>
+    </listeners>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://ftrjira.ftr.com"/>
+    <test name="Jira Comparison">
+        <classes>
+            <class name="com.globant.web.tests.JiraSuite"/>
+        </classes>
+    </test>
+</suite>
